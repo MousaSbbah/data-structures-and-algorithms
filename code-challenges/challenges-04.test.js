@@ -82,19 +82,20 @@ CHALLENGE 6
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
+
 const citiesAtoJ = (arr) => {
   // Solution code here...
   let regex = /^[A-J]/g;
   let newArr = [];
-  arr.forEach(val=>{
-    if(regex.test(val)){
+  arr.forEach(val =>{
+    let check =  val.match(regex);
+    if(check !== null ){
       newArr.push(val);
     }
   });
   return newArr;
-
-
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
