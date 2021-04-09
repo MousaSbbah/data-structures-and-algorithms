@@ -180,12 +180,14 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-  return data.reduce((acc,val)=>{
-    if(acc.length > (val.name.length) || acc === ''){
-      acc = val.name;
+
+  let shortestObj = data.reduce((acc,val,index)=>{
+    if( acc.height<(val.height) || index === 0){
+      acc = val;
     }
     return acc ;
-  },'');
+  },{});
+  return shortestObj.name;
 
 
 };
