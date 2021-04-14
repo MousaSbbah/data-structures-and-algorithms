@@ -10,6 +10,10 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+  return arr.reduce((acc,val,indx)=>{
+    if (val>acc || indx===0){ acc = val;}
+    return acc ;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -17,7 +21,7 @@ CHALLENGE 2
 
 Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 6],
@@ -28,6 +32,13 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let a = 0 ;
+  matrix.forEach(arr => {
+    arr.forEach(val => {
+      if(val>a){a = val;}
+    });
+  });
+  return a ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +46,7 @@ CHALLENGE 3
 
 Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 1],
@@ -46,6 +57,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  return matrix.reduce((sum,arr)=>{
+    sum += arr.reduce((acc,val)=>{
+      acc+=val;
+      return acc ;
+    },0);
+    return sum ;
+  },0);
 };
 
 
@@ -73,6 +91,11 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  return hoursOpen.reduce((result,store,indx)=>{
+    result.push(stores.reduce((acc,arr)=>{return acc+=arr[indx];},0));
+    return result;
+  },[]);
+
 
 };
 
@@ -88,6 +111,10 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  return hoursOpen.reduce((result,hour,indx)=>{
+    result.push( {sales:`${data[indx]} cookies`, time: `${hour}`});
+    return result;
+  },[]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,6 +140,15 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let result;
+  arr.forEach(obj => {
+    if(obj.store === 'Pet store'){
+      obj.items.forEach(val=>{
+        if(val.name === 'Treats'){ result= val.quantity;}
+      });
+    }
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
