@@ -5,3 +5,5 @@
 |Challenge | link|
 |--|---|
 |Reverse Array |[ReadMe](./javascript/code-challenges/reverse-array/readme.md)|
+|shift Array |[ReadMe](./javascript/code-challenges/array-shift/readme.md)|
+|Binary Search  |[ReadMe](./javascript/code-challenges/array-shift/readme.md)|
