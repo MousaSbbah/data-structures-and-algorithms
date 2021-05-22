@@ -4,12 +4,13 @@ Write a function called `insertShiftArray` which takes in an array and a value t
 
 ## Whiteboard Process
 
-![reverse-array](../../../assest/array-shift.jpg)
+![reverse-array](../../../assest/shift-array.jpg)
 
 
 ## Approach & Efficiency
+Push the old array to the new one till the middle index
+then push the input value then push the remaining old array to the new one  
 
+### **BIG O** 
+O(n)
 
-Calculate the middle index of the input array 
-and 
-Put the value at this index by using `Splice`
