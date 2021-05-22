@@ -10,6 +10,11 @@ class LinkedList {
    * @param  {any} value //New Node Value
    */
   insert(value) {
+    //Check for any Invalid inputs and console error
+    if (value === null || value === undefined) {
+      console.log('Invalid input');
+      return;
+    }
     const newNode = new Node(value, this.head);
     this.head = newNode;
     this.length++;
@@ -18,6 +23,11 @@ class LinkedList {
    * @param  {any} value // Node value
    */
   includes(value) {
+    //Check for any Invalid inputs and console error
+    if (value === null || value === undefined) {
+      console.error('Invalid input');
+      return;
+    }
     let current = this.head;
     for (let i = 0; i < this.length; i++) {
       if (current.value === value) {
@@ -50,5 +60,7 @@ class Node {
     this.next = next;
   }
 }
+const ll = new LinkedList();
+ll.includes(null);
 
 module.exports = LinkedList;
