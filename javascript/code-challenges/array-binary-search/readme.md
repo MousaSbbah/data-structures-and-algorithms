@@ -4,12 +4,15 @@ Write a function called `BinarySearch` which takes in 2 parameters: a sorted arr
 
 ## Whiteboard Process
 
-![reverse-array](../../../assest/BinarySearch.bmp)
+![reverse-array](../../../assest/binary-search.jpg)
 
 
 ## Approach & Efficiency
 
+### **Big O**
+O(log n)
 
 Pick the middle index and compare it with the target and if there is equal each other return it 
  if  it great than the target minimize   to right half and to the left half  if it lower than target 
 repeat the process tell get the index if there is no result return -1
+
