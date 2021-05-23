@@ -136,17 +136,6 @@ class Node {
     this.next = next;
   }
 }
-//2 - 3 -4 - 5
-const ll = new LinkedList();
-ll.insert(6);
-ll.insert(5);
-ll.insert(4);
-ll.insert(3);
-ll.insert(2);
-ll.insert(1);
 
-console.log(ll.toString());
-ll.insertAfter(4,0);
-console.log(ll.toString());
 
 module.exports = LinkedList;

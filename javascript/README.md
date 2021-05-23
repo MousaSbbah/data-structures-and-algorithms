@@ -2,7 +2,11 @@
 
 Singly linked list can be defined as the collection of ordered set of elements. The number of elements may vary according to need of the program. A node in the singly linked list consist of two parts: data part and link part. Data part of the node stores actual information that is to be represented by the node while the link part of the node stores the address of its immediate successor.
 
-## Challenge
+# Challenge 01  
+- Define a method called `insert` which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+- Define a method called `includes` which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+- Define a method called `toString` (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
+"{ a } -> { b } -> { c } -> NULL"
 
 ![linked list whiteboard](../assest/linked-list.jpg)
 
@@ -24,4 +28,38 @@ Singly linked list can be defined as the collection of ordered set of elements. 
 
 * `toString` : 
     returns a string representing all the values in the Linked List
-    
+
+#   Challenge 02 
+Write the following methods for the Linked List class:
+
+- `append(value)` which adds a new node with the given value to the end of the list
+- `insertBefore(value, newVal)` which add a new node with the given newValue immediately before the first value node
+- `insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node
+
+![linked list whiteboard](../assest/ll-insertions.jpg)
+
+## Approach & Efficiency
+
+### **Big O**
+* append method 
+    - time ---> O(n)
+    - space ---> O(n)
+* insertBefore method 
+    - time ---> O(n)
+    - space ---> O(n)
+* insertAfter method 
+    - time ---> O(n)
+    - space ---> O(n)
+
+## API
+
+* ` append(value)` :
+    Insert New Node with value at the end of the linked list  .
+
+* `insertBefore(value, newVal)` : 
+     Insert New Node with value before specific value .
+
+* `insertAfter(value, newVal)` : 
+    Insert New Node with value after specific value .
+
+## 
