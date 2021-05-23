@@ -47,6 +47,82 @@ class LinkedList {
     }
     return message + 'NULL';
   }
+  append(value) {
+    let newNode = new Node(value,null);
+    if(this.head === null){
+      this.head=newNode;
+    }else{
+      let tail = this.head;
+      while(tail.next !== null){
+        tail = tail.next;
+
+      }
+      tail.next = newNode;
+    }
+  }
+  insertBefore(value, newVal){
+    let newNode = new Node(newVal);
+
+    if(!this.head){
+      throw new Error('Error Empty Linked List ');
+    } else {
+
+      let current = this.head.next;
+      let target = this.head;
+      if(!current) {
+        if(target.value === value){
+          newNode.next = target;
+          this.head = newNode;
+          return;
+        }
+        else {
+          throw new Error('ERROR :The linked list has one item');
+        }
+      }
+
+
+      if(target.value === value){
+        this.head = newNode;
+        newNode.next = target;
+
+        return;
+      }
+      while(current){
+        if(current.value === value){
+          target.next=newNode;
+          newNode.next = current;
+          return;
+        }
+        target = current;
+        current = current.next;
+      }
+
+    }
+    throw new Error('ERROR :Invalid Input');
+  }
+
+  insertAfter(value, newVal) {
+
+    let newNode = new Node(newVal);
+
+    if(!this.head){
+      throw new Error('ERROR :Empty Linked List');
+    } else {
+
+      let current = this.head;
+      while(current){
+        if(current.value === value){
+          newNode.next = current.next;
+          current.next=newNode;
+
+          return;
+        }
+        current = current.next;
+      }
+    }
+    throw new Error('ERROR :Invalid input');
+
+  }
 }
 
 class Node {
@@ -60,7 +136,17 @@ class Node {
     this.next = next;
   }
 }
+//2 - 3 -4 - 5
 const ll = new LinkedList();
-ll.includes(null);
+ll.insert(6);
+ll.insert(5);
+ll.insert(4);
+ll.insert(3);
+ll.insert(2);
+ll.insert(1);
+
+console.log(ll.toString());
+ll.insertAfter(4,0);
+console.log(ll.toString());
 
 module.exports = LinkedList;

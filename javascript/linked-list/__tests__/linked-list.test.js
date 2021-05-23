@@ -24,4 +24,8 @@ describe('Linked List', () => {
   it('Should return  a string representing all the values in the Linked List,', () => {
     expect(ll.toString()).toBe('{10}-->{20}-->{30}-->{40}-->NULL');
   });
+
+  it('Should append  new Node ', () => {
+    expect(ll.toString()).toBe('{10}-->{20}-->{30}-->{40}-->NULL');
+  });
 });
