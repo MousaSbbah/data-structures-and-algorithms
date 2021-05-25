@@ -62,3 +62,49 @@ describe('Linked List insertion', () => {
     expect(ll1.toString()).toBe('{49}-->{5}-->{6}-->{69}-->{70}-->{7}-->{8}-->{9}-->{10}-->NULL');
   });
 });
+
+describe('kthFromEnd method', () => {
+  let ll2 = new LinkedList();
+  let ll3 = new LinkedList();
+  let ll4 = new LinkedList();
+  ll4.insert(4);
+  ll4.insert(3);
+  ll4.insert(2);
+  ll4.insert(1);
+  ll2.insert(6);
+
+  // Check where k is greater than the length of the linked list it should throw error
+  // Check where k and the length of the list are the same it should throw error
+  // Check where k is not a positive integer it should throw error
+  // Check where the linked list is of a size 1 it should throw error
+  // Check “Happy Path” where k is not at the end, but somewhere in the middle of the linked list it should return the value of this node 
+  it('Check where k is greater than the length of the linked list it should throw error', () => {
+
+    expect(ll4.kthFromEnd(10)).toBe('The K should be positive integer and less than the linked list length');
+  });
+  it('Check where k and the length of the list are the same it should throw error', () => {
+
+    expect(ll4.kthFromEnd(4)).toBe('The K should be positive integer and less than the linked list length');
+  });
+  it('Check where k is not a positive integer it should throw error', () => {
+
+    expect(ll4.kthFromEnd(-1)).toBe('The K should be positive integer and less than the linked list length');
+  });
+  it('Check where the linked list is of a size 1 it should throw error', () => {
+
+    expect(ll2.kthFromEnd(1)).toBe('ERROR :The linked list must has more than one node');
+  });
+
+  it('Check “Happy Path” where k is not at the end, but somewhere in the middle of the linked list it should return the value of this node', () => {
+
+    expect(ll4.kthFromEnd(2)).toBe(2);
+  });
+
+});
+
+describe("Test description", () => {
+  const t = () => {
+    throw new TypeError();
+  };
+  expect(t).toThrow(TypeError);
+});

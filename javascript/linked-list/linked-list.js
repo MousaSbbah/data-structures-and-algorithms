@@ -47,73 +47,69 @@ class LinkedList {
     }
     return message + 'NULL';
   }
+  /**
+   * @param  {any} value
+   */
   append(value) {
-    let newNode = new Node(value,null);
-    if(this.head === null){
-      this.head=newNode;
-    }else{
+    let newNode = new Node(value, null);
+    if (this.head === null) {
+      this.head = newNode;
+    } else {
       let tail = this.head;
-      while(tail.next !== null){
+      while (tail.next !== null) {
         tail = tail.next;
-
       }
       tail.next = newNode;
     }
   }
-  insertBefore(value, newVal){
+  insertBefore(value, newVal) {
     let newNode = new Node(newVal);
 
-    if(!this.head){
+    if (!this.head) {
       throw new Error('Error Empty Linked List ');
     } else {
-
       let current = this.head.next;
       let target = this.head;
-      if(!current) {
-        if(target.value === value){
+      if (!current) {
+        if (target.value === value) {
           newNode.next = target;
           this.head = newNode;
           return;
-        }
-        else {
+        } else {
           throw new Error('ERROR :The linked list has one item');
         }
       }
 
-
-      if(target.value === value){
+      if (target.value === value) {
         this.head = newNode;
         newNode.next = target;
 
         return;
       }
-      while(current){
-        if(current.value === value){
-          target.next=newNode;
+      while (current) {
+        if (current.value === value) {
+          target.next = newNode;
           newNode.next = current;
           return;
         }
         target = current;
         current = current.next;
       }
-
     }
     throw new Error('ERROR :Invalid Input');
   }
 
   insertAfter(value, newVal) {
-
     let newNode = new Node(newVal);
 
-    if(!this.head){
+    if (!this.head) {
       throw new Error('ERROR :Empty Linked List');
     } else {
-
       let current = this.head;
-      while(current){
-        if(current.value === value){
+      while (current) {
+        if (current.value === value) {
           newNode.next = current.next;
-          current.next=newNode;
+          current.next = newNode;
 
           return;
         }
@@ -121,7 +117,20 @@ class LinkedList {
       }
     }
     throw new Error('ERROR :Invalid input');
+  }
 
+  kthFromEnd(k) {
+    if(!this.head || !this.head.next){ return 'ERROR :The linked list must has more than one node';}
+    if (Number.isInteger(k) && k < this.length && k > 0) {
+      let current = this.head;
+      let index = this.length - k;
+      for (let i = 1; i < index; i++) {
+        current = current.next;
+      }
+      return current.value;
+    } else {
+      return 'The K should be positive integer and less than the linked list length';
+    }
   }
 }
 
@@ -136,6 +145,8 @@ class Node {
     this.next = next;
   }
 }
+
+
 
 
 module.exports = LinkedList;
