@@ -54,12 +54,14 @@ class LinkedList {
     let newNode = new Node(value, null);
     if (this.head === null) {
       this.head = newNode;
+      this.length++;
     } else {
       let tail = this.head;
       while (tail.next !== null) {
         tail = tail.next;
       }
       tail.next = newNode;
+      this.length++;
     }
   }
   insertBefore(value, newVal) {
@@ -74,6 +76,7 @@ class LinkedList {
         if (target.value === value) {
           newNode.next = target;
           this.head = newNode;
+          this.length++;
           return;
         } else {
           throw new Error('ERROR :The linked list has one item');
@@ -90,6 +93,7 @@ class LinkedList {
         if (current.value === value) {
           target.next = newNode;
           newNode.next = current;
+          this.length++;
           return;
         }
         target = current;
@@ -110,7 +114,7 @@ class LinkedList {
         if (current.value === value) {
           newNode.next = current.next;
           current.next = newNode;
-
+          this.length++;
           return;
         }
         current = current.next;
@@ -145,7 +149,6 @@ class Node {
     this.next = next;
   }
 }
-
 
 
 
