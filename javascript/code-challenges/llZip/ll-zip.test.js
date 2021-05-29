@@ -19,13 +19,12 @@ describe('ZipList method', () => {
   it('Return ZipList  ', () => {
     let llResult = zipList(llInput1, llInput2);
     expect(llResult.head.value).toBe('a');
-    expect(llResult.length).toBe(10);
     expect(llResult.toString()).toBe(
       '{a}-->{1}-->{b}-->{2}-->{c}-->{3}-->{d}-->{4}-->{e}-->{5}-->NULL'
     );
   });
   it('Return error string for invalid input   ', () => {
-    let llResult = zipList("llInput1", llInput2);
+    let llResult = zipList('llInput1', llInput2);
     expect(llResult.toString()).toBe(
       'The input should be Linked list '
     );
