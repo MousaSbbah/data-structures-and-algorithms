@@ -8,18 +8,41 @@ function zipLists(ll1, ll2) {
   }
   let current1 = ll1.head;
   let current2 = ll2.head;
-  const result = new LinkedList();
-  while (current1 || current2) {
-    if (current1) {
-      result.append(current1.value);
-      current1 = current1.next;
+  while (current2 || current1) {
+    if(!current1.next){
+      console.log(current2);
+      current1.next=current2;
+      break;
     }
-    if (current2) {
-      result.append(current2.value);
-      current2 = current2.next;
+    if(!current2.next){
+      console.log(current1);
+      break;
     }
+    let nextNode1 = current1.next;
+    let nextNode2 = current2.next;
+    current1.next=current2;
+    current1.next.next = nextNode1;
+    current1=nextNode1;
+    current2 = nextNode2;
+
   }
-  return result;
+  return ll1;
 }
+
+
+let llInput1 = new LinkedList();
+let llInput2 = new LinkedList();
+llInput1.insert('e');
+llInput1.insert('d');
+llInput1.insert('c');
+llInput1.insert('b');
+llInput1.insert('a');
+// llInput2.insert(5);
+// llInput2.insert(4);
+llInput2.insert(3);
+llInput2.insert(2);
+llInput2.insert(1);
+
+console.log(zipLists(llInput1, llInput2).toString());
 
 module.exports = zipLists;
