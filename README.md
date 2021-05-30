@@ -8,6 +8,7 @@
 | shift Array   | [ReadMe](./javascript/code-challenges/array-shift/readme.md)   |
 | Binary Search | [ReadMe](./javascript/code-challenges/array-binary-search/readme.md)   |
 | Zip two linked lists. | [ReadMe](./javascript/code-challenges/llZip/readme.md)  / [Code](./javascript/code-challenges/llZip/ll-zip.js) / [Test](./javascript/code-challenges/llZip/ll-zip.test.js) |
+| Queues with Stacks. | [ReadMe](./javascript/code-challenges/queueWithStacks/readme.md)  / [Code](./javascript/code-challenges/queueWithStacks/queue-with-stacks.js) / [Test](./javascript/code-challenges/queueWithStacks/queue-with-stacks.test.js) |
 
 | data structures    | links                                                           |
 | ------------- | -------------------------------------------------------------- |
