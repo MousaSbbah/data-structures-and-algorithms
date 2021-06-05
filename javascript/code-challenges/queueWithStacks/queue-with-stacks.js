@@ -5,7 +5,7 @@ const { Stack } = require('../../stacksAndQueues/stacks-and-queues');
 /**    PseudoQueue  Class
  */
 class PseudoQueue {
-    
+
   constructor() {
     this.main = new Stack();
     this.temp = new Stack();
@@ -34,7 +34,7 @@ class PseudoQueue {
     //pop the last node
     this.main.pop();
     while (this.temp.top) {
-        //return back the main nodes without last one 
+      //return back the main nodes without last one
       this.main.push(this.temp.top.value);
       this.temp.top = this.temp.top.next;
     }
@@ -42,5 +42,8 @@ class PseudoQueue {
     return result;
   }
 }
+
+
+
 
 module.exports = PseudoQueue;
