@@ -99,6 +99,26 @@ class Queue {
 }
 
 
+const qq = new Queue();
+qq.enqueue('a');
+qq.enqueue('b');
+qq.enqueue('c');
+qq.enqueue('d');
+qq.enqueue('e');
+
+function asd(qq,input) {
+  while (qq.length !== 1 ){
+    for (let k = 0; k < input; k++) {
+      if(k === 2 ){
+        qq.dequeue();
+      }else{
+        qq.enqueue(qq.dequeue());
+      }
+    }
+  }
+}
+asd(qq,3);
+console.log(qq);
 
 module.exports = {
   Stack: Stack,
