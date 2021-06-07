@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * // Create a Node class
@@ -22,7 +22,7 @@ class Stack {
 
   push(val) {
     if (val === null || val === undefined) {
-      throw "Invalid Input";
+      throw 'Invalid Input';
     }
     const newNode = new Node(val, this.top);
     this.top = newNode;
@@ -30,7 +30,7 @@ class Stack {
   }
   pop() {
     if (this.top === null) {
-      throw "error : Empty stack";
+      throw 'error : Empty stack';
     }
     let value = this.top.value;
     this.top = this.top.next;
@@ -39,7 +39,7 @@ class Stack {
   }
   peek() {
     if (this.top === null) {
-      throw "error : Empty stack";
+      throw 'error : Empty stack';
     }
     return this.top.value;
   }
@@ -78,7 +78,7 @@ class Queue {
   }
   dequeue() {
     if (this.top === null) {
-      throw "error : Empty stack";
+      throw 'error : Empty stack';
     }
     let value = this.front.value;
     this.front = this.front.next;
@@ -99,26 +99,7 @@ class Queue {
 }
 
 
-const qq = new Queue();
-qq.enqueue('a');
-qq.enqueue('b');
-qq.enqueue('c');
-qq.enqueue('d');
-qq.enqueue('e');
 
-function asd(qq,input) {
-  while (qq.length !== 1 ){
-    for (let k = 0; k < input; k++) {
-      if(k === 2 ){
-        qq.dequeue();
-      }else{
-        qq.enqueue(qq.dequeue());
-      }
-    }
-  }
-}
-asd(qq,3);
-console.log(qq);
 
 module.exports = {
   Stack: Stack,
