@@ -1,6 +1,7 @@
 'use strict';
 //code challenge 16
 const findMaximumValue = require('../code-challenges/find-maximum-binary-tree/find-maximum-binary-tree.js');
+const breadthFirst = require('../code-challenges/breadth-first/breadth-first.js');
 
 
 
@@ -124,6 +125,6 @@ class BinarySearchTree {
   }
 }
 BinaryTree.prototype.findMaximumValue=findMaximumValue;
-
+BinaryTree.prototype.breadthFirst=breadthFirst;
 
 module.exports = { BinaryTree, Node, BinarySearchTree };
