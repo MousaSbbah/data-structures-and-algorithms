@@ -25,3 +25,4 @@
 | Sort | links                                                                                                                                                                            |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |Insertion Sort|[ReadMe](./javascript/Sort/insertion/readme.md) ---  [Blog](./javascript/Sort/insertion/blog.md) --- [Code](./javascript/Sort/insertion/insertion-sort.js) --- [test](./javascript/Sort/insertion/insertion-sort.test.js)        |
+|Merge Sort|[ReadMe](./javascript/Sort/marge/readme.md) ---  [Blog](./javascript/Sort/marge/blog.md) --- [Code](./javascript/Sort/marge/marge-sort.js) --- [test](./javascript/Sort/marge/marge-sort.test.js)        |
