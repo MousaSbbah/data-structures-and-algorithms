@@ -26,3 +26,4 @@
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |Insertion Sort|[ReadMe](./javascript/Sort/insertion/readme.md) ---  [Blog](./javascript/Sort/insertion/blog.md) --- [Code](./javascript/Sort/insertion/insertion-sort.js) --- [test](./javascript/Sort/insertion/insertion-sort.test.js)        |
 |Merge Sort|[ReadMe](./javascript/Sort/marge/readme.md) ---  [Blog](./javascript/Sort/marge/blog.md) --- [Code](./javascript/Sort/marge/marge-sort.js) --- [test](./javascript/Sort/marge/marge-sort.test.js)        |
+|Quick Sort|[ReadMe](./javascript/Sort/quick/readme.md) ---  [Blog](./javascript/Sort/quick/blog.md) --- [Code](./javascript/Sort/quick/quick-sort.js) --- [test](./javascript/Sort/quick/quick-sort.test.js)        |
