@@ -1,4 +1,4 @@
-# Trees
+# Hash Table
 Implement a Hashtable Class with the following methods:
 
 - add
