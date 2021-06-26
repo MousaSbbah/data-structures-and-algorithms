@@ -20,6 +20,7 @@
 | Linked List     | [ReadMe](./javascript/linked-list/README.md)                                                                                                                                     |
 | Stack & Queue   | [ReadMe](./javascript/stacksAndQueues/readme.md) ---- [code](./javascript/stacksAndQueues/stacks-and-queues.js)---[test](./javascript/stacksAndQueues/stacks-and-queues.test.js) |
 | Tree  | [ReadMe](./javascript/tree/readme.md) ---- [code](./javascript/tree/tree.js)---[test](./javascript/tree/tree.test.js) |
+| Hash Table  | [ReadMe](./javascript/hastable/readme.md) ---- [code](./javascript/hastable/hash-table.js)---[test](./javascript/hastable/hash-table.test.js) |
 
 
 | Sort | links                                                                                                                                                                            |
